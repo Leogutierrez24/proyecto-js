@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  width: 90%;
+  padding: 0 20px;
+  height: 50px;
+  -webkit-box-shadow: 0 0 5px 2px #b1b1b1;
+          box-shadow: 0 0 5px 2px #b1b1b1;
+  border-radius: 9px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navContainer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navMenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMenu li {
+  padding: 0 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navMenu li:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  text-shadow: 0 0 3px #424242;
+}
+
+.navMenu li a {
+  padding: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hero {
+  width: 92%;
+  height: 300px;
+  margin: 10px auto;
+  background: url(../assets/images/hero-back.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hero .hero-bottom {
+  width: 100%;
+  height: 100%;
+  background: #000000b0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding-top: 50px;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.newsSection {
+  width: 92%;
+  height: 400px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsSection h2 {
+  width: 10%;
+  margin: 0;
+  padding: 10px;
+  background: #265fff;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.newsContainer {
+  width: 100%;
+  background: #265fff;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.news {
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ffffff3b;
+}
+
+.newsTitle-container {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.newsTitle-container h3 {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #ffffff3b;
+  color: #fff;
+  text-shadow: 0 0 3px #333333;
+  letter-spacing: .1rem;
+}
+
+.newsText-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newsText-container p {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.newsText-container a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px;
+  border: 1px solid #ffffff3b;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.newsText-container a:hover {
+  background: #fff;
+  color: #265fff;
+}
+
+footer {
+  width: 100%;
+  background: #333333;
+}
+/*# sourceMappingURL=home-style.css.map */
