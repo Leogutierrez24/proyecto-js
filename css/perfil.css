@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background: url(../assets/images/hero-back.jpg) no-repeat;
+  background-size: cover;
+}
+
+.dark-tin {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  background: #000000b0;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  width: 90%;
+  padding: 0 20px;
+  height: 50px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px 2px #b1b1b1;
+          box-shadow: 0 0 5px 2px #b1b1b1;
+  border-radius: 9px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navContainer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navMenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMenu li {
+  padding: 0 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navMenu li:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  text-shadow: 0 0 3px #424242;
+}
+
+.navMenu li a {
+  padding: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.perfilButtons {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.perfilButtons ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.perfilButtons ul li {
+  height: 40px;
+  background: #265fff;
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.perfilButtons ul span {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.perfilContent {
+  width: 80%;
+  padding: 15px;
+  background: #fff;
+}
+/*# sourceMappingURL=perfil.css.map */

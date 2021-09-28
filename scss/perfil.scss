@@ -1,0 +1,58 @@
+@import "variables";
+
+body{
+    margin: 0;
+    height: 100vh;
+    background: url(../assets/images/hero-back.jpg) no-repeat;
+    background-size: cover;
+}
+
+.dark-tin{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    background: #000000b0;
+}
+
+@import "navBar";
+
+.section{
+    width: 100%;
+    height: fit-content;
+    padding-top: 50px;
+    font-family: $title-fonts;
+    display: flex;
+    justify-content: center;
+}
+
+.perfilButtons{
+    height: fit-content;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        li{
+            height: 40px;
+            background: $news-color;
+            display: inherit;
+            justify-content: center;
+        }
+        span{
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+}
+
+.perfilContent{
+    width: 80%;
+    padding: 15px;
+    background: #fff;
+}
