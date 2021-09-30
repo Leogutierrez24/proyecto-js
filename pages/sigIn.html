@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarme - Campus fmed</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signIn.css">
 </head>
 <body>
     <div class="dark-tin">
@@ -20,20 +20,24 @@
                 </div>
             </nav>
         </header>
-        <div class="loginSection">
+        <div class="signIn-section">
             <h3>Registrarme</h3>
-            <form class="login-form" action="">
+            <form class="signIn-form" action="">
                 <label for="nombre">Nombre y apellido</label>
-                <input type="text" placeholder="nombre y apellido" id="nombre" />
+                <input type="text"  id="nombre" />
                 <label for="idLibreta">N° de libreta universitaria</label>
-                <input type="text" placeholder="12345" maxlength="5" id="idLibreta" />
+                <input type="text" placeholder="Los 5 números de tu libreta universitaria" maxlength="5" id="idLibreta" />
                 <label for="usuario">Email</label>
-                <input type="text" placeholder="email de tu usuario" id="usuario" />
-                <label for="contraseña">Contraseña</label>
-                <input type="password" placeholder="tu contraseña" id="contraseña" />
-                <input type="submit" value="aceptar" id="login-button" />
+                <input type="text"  id="usuario" />
+                <label for="contrasenia">Contraseña</label>
+                <input type="password"  id="contrasenia" />
+                <p id="mensaje"></p>
+                <input type="submit" value="aceptar" id="signin-button" />
             </form>
         </div>
     </div>
+    <script src="../javascript/DOM.js"></script>
+    <script src="../javascript/objetos.js"></script>
+    <script src="../javascript/signIn.js"></script>
 </body>
 </html>

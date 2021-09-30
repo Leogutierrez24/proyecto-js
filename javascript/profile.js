@@ -3,7 +3,14 @@ const logedUser = JSON.parse(localStorage.getItem('usuarioLogeado'));
 function mostrarInfo(){
     infoButton.style.background = '#fff';
     infoButton.style.color = '#265fff';
+    infoContent.style.display = 'block';
+
+    materiasButton.style.background = '#265fff';
+    materiasButton.style.color = '#fff';
     materiasContent.style.display = 'none';
+
+    inscripButton.style.background = '#265fff';
+    inscripButton.style.color = '#fff';
     inscripContent.style.display = 'none';
 
     infoContent.innerHTML = `<h3 class="infoTitle">Información</h3>
@@ -13,14 +20,17 @@ function mostrarInfo(){
                             `;
 }
 
-infoButton.onclick = () => {
-    mostrarInfo();
-}
-
 function mostrarMaterias(){
     materiasButton.style.background = '#fff';
     materiasButton.style.color = '#265fff';
+    materiasContent.style.display = 'block';
+
+    infoButton.style.background = '#265fff'
+    infoButton.style.color = '#fff';
     infoContent.style.display = 'none';
+
+    inscripButton.style.background = '#265fff';
+    inscripButton.style.color = '#fff';
     inscripContent.style.display = 'none';
 
     if(logedUser.libreta != 24012){
@@ -37,6 +47,39 @@ function mostrarMaterias(){
     }
 }
 
+function mostrarInscrip(){
+    inscripButton.style.background = '#fff';
+    inscripButton.style.color = '#265fff';
+    inscripContent.style.display = 'block';
+
+    infoButton.style.background = '#265fff'
+    infoButton.style.color = '#fff';
+    infoContent.style.display = 'none';
+
+    materiasButton.style.background = '#265fff';
+    materiasButton.style.color = '#fff';
+    materiasContent.style.display = 'none';
+
+    console.log('trabajando acá');
+}
+
+function logout(){
+    localStorage.removeItem('usuarioLogeado');
+    location.href = '../pages/login.html';
+}
+
+logoutButton.onclick = () => {
+    logout();
+}
+
+infoButton.onclick = () => {
+    mostrarInfo();
+}
+
 materiasButton.onclick = () => {
     mostrarMaterias();
+}
+
+inscripButton.onclick = () => {
+    mostrarInscrip();
 }

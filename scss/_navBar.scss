@@ -36,12 +36,17 @@ nav{
         transition: .3s;
         &:hover{
             transform: scale(1.04);
-            text-shadow: 0 0 3px #424242;
         }
         a{
-            padding: 15px;
-            color: #000;
+            padding: 13px;
+            color: #a5a5a5;
             text-decoration: none;
+            border: .9px solid #c9c9c9;
+            border-radius: 20px;
+            &:hover{
+                color: #000;
+                transition: .3s;
+            }
         }
     }
 }

@@ -71,13 +71,20 @@ nav {
 .navMenu li:hover {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
-  text-shadow: 0 0 3px #424242;
 }
 
 .navMenu li a {
-  padding: 15px;
-  color: #000;
+  padding: 13px;
+  color: #a5a5a5;
   text-decoration: none;
+  border: .9px solid #c9c9c9;
+  border-radius: 20px;
+}
+
+.navMenu li a:hover {
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .section {
@@ -137,5 +144,17 @@ nav {
   width: 80%;
   padding: 15px;
   background: #fff;
+}
+
+.informacion {
+  display: block;
+}
+
+.materias {
+  display: none;
+}
+
+.inscripcion {
+  display: none;
 }
 /*# sourceMappingURL=perfil.css.map */

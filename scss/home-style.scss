@@ -1,6 +1,9 @@
 @import "variables";
 
-body{margin: 0}
+body{
+    margin: 0;
+    background: #ededed;
+}
 
 // encabezado
 header{
@@ -17,6 +20,7 @@ nav{
     width: 90%;
     padding: 0 20px;
     height: 50px;
+    background: #fff;
     box-shadow: $boxes-shadow;
     border-radius: 9px;
     font-family: $title-fonts;
@@ -40,12 +44,17 @@ nav{
         transition: .3s;
         &:hover{
             transform: scale(1.04);
-            text-shadow: 0 0 3px #424242;
         }
         a{
-            padding: 15px;
-            color: #000;
+            padding: 13px;
+            color: #a5a5a5;
             text-decoration: none;
+            border: .9px solid #c9c9c9;
+            border-radius: 20px;
+            &:hover{
+                color: #000;
+                transition: .3s;
+            }
         }
     }
 }
@@ -173,6 +182,7 @@ nav{
 
 .contactoDetail-container{
     width: 100%;
+    max-width: 1200px;
     height: 90%;
     border-radius: 3px;
     display: flex;

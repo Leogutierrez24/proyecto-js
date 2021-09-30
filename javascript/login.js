@@ -7,12 +7,16 @@ function login(userMail, userPass){
         if (userPass === verifUser.clave){
             localStorage.setItem('usuarioLogeado', JSON.stringify(verifUser));
             console.log('Bienvenido ' + verifUser.nombre);
-            location.href = 'file:///E:/Coderhouse/JavaScript/proyecto-final/pages/profile.html';
+            location.href="../pages/profile.html";
         } else {
-            console.log('contraseña incorrecta');
+            // console.log('contraseña incorrecta');
+            mensaje.innerHTML = 'Usuario o contraseña incorrecta';
+            mensaje.style.color = '#be2929';
         }
     } else {
-        console.log('algo salio mal');
+        console.log('usuario no registrado');
+        mensaje.innerHTML = 'Usuario o contraseña incorrecta';
+            mensaje.style.color = '#be2929';
     }
 }
 
