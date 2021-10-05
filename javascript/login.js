@@ -9,12 +9,10 @@ function login(userMail, userPass){
             console.log('Bienvenido ' + verifUser.nombre);
             location.href="../pages/profile.html";
         } else {
-            // console.log('contraseña incorrecta');
             mensaje.innerHTML = 'Usuario o contraseña incorrecta';
             mensaje.style.color = '#be2929';
         }
     } else {
-        console.log('usuario no registrado');
         mensaje.innerHTML = 'Usuario o contraseña incorrecta';
             mensaje.style.color = '#be2929';
     }
