@@ -140,21 +140,48 @@ nav {
   color: #fff;
 }
 
+.perfilButtons ul span:hover {
+  background: #fff;
+  color: #265fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .perfilContent {
   width: 80%;
   padding: 15px;
   background: #fff;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .informacion {
+  padding: 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
   display: block;
 }
 
+.informacion h3 {
+  margin: 0 0 10px 0;
+}
+
+.informacion p {
+  margin: 8px 0;
+}
+
 .materias {
+  padding: 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
   display: none;
 }
 
-.inscripcion {
+.inscripciones {
+  padding: 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
   display: none;
 }
 /*# sourceMappingURL=perfil.css.map */
