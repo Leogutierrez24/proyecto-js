@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   background: url(../assets/images/hero-back.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .dark-tin {
@@ -138,11 +143,12 @@ nav {
   padding: 10px;
   cursor: pointer;
   color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .perfilButtons ul span:hover {
-  background: #fff;
-  color: #265fff;
+  background: #4475ff;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -165,6 +171,7 @@ nav {
 
 .informacion h3 {
   margin: 0 0 10px 0;
+  color: #265fff;
 }
 
 .informacion p {
@@ -178,10 +185,33 @@ nav {
   display: none;
 }
 
+.materias h3 {
+  margin: 0 0 10px 0;
+  color: #265fff;
+}
+
+.materia-details {
+  margin: 20px 0;
+  padding: 5px;
+  background: #f1f1f1;
+  -webkit-box-shadow: 2px 2px 7px 1px #cdcdcd;
+          box-shadow: 2px 2px 7px 1px #cdcdcd;
+  border-radius: 3px;
+}
+
+.materia-details p {
+  margin: 8px 0;
+}
+
 .inscripciones {
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
   display: none;
+}
+
+.inscripciones h3 {
+  margin: 0 0 10px 0;
+  color: #265fff;
 }
 /*# sourceMappingURL=perfil.css.map */

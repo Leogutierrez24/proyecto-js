@@ -1,10 +1,13 @@
 @import "variables";
 
+html{height: 100%;}
+
 body{
     margin: 0;
-    height: 100vh;
+    height: 100%;
     background: url(../assets/images/hero-back.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .dark-tin{
@@ -47,9 +50,9 @@ body{
             padding: 10px;
             cursor: pointer;
             color: #fff;
+            transition: .3s;
             &:hover{
-                background: #fff;
-                color: $news-color;
+                background: #4475ff;
                 transition: .3s;
             }
         }
@@ -69,18 +72,33 @@ body{
     padding: 10px;
     border: 1px solid $color-border2;
     border-radius: 5px;
+    h3{
+        margin: 0 0 10px 0;
+        color: $news-color;
+    }
+    
 }
 
 .informacion{
     @include profile-borders;
     display: block;
-    h3{margin: 0 0 10px 0;}
     p{margin: 8px 0;}
 }
 
 .materias{
     @include profile-borders;
     display: none;
+}
+
+.materia-details{
+    margin: 20px 0;
+    padding: 5px;
+    background: #f1f1f1;
+    box-shadow: 2px 2px 7px 1px #cdcdcd;
+    border-radius: 3px;
+    p{
+        margin: 8px 0;
+    }
 }
 
 .inscripciones{

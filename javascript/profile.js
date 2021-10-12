@@ -1,8 +1,11 @@
 const logedUser = JSON.parse(localStorage.getItem('usuarioLogeado'));
 
+infoButton.style.background = '#fff';
+infoButton.style.color = '#265fff';
+infoContent.style.display = 'block';
+
 // qué mostrar en "Perfil"
-$("#informacion").append(`<h3 class="infoTitle">Información</h3>
-<p>Nombre y apellido: ${logedUser.nombre}</p>
+$("#informacion").append(`<p>Nombre y apellido: ${logedUser.nombre}</p>
 <p>N° de libreta universitaria: ${logedUser.libreta}</p>
 <p>Email: ${logedUser.mail}</p>`);
 
@@ -12,8 +15,7 @@ if(logedUser.libreta != 24012){
     $('#materias').append(`<h3>Tu información todavía no ha sido cargada en el sistema</h3>`);
 } else {
     for(const materia of materias24012){
-        $('#materias').append(`
-        <div class="materia-details">
+        $('#materias').append(`<div class="materia-details">
             <p>Materia: ${materia.nombre}</p>
             <p>Código de la materia: ${materia.codigo}</p>
             <p>Nota final: ${materia.calif}</p>
