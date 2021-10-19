@@ -51,18 +51,24 @@ const materias24012 = [
 ];
 
 class Inscripciones{
-    constructor(nombre, codigo, turno){
+    constructor(nombre, codigo, profesor, aula, turno){
         this.nombre = nombre;
         this.codigo = codigo;
+        this.profesor = profesor.toUpperCase();
+        this.aula = aula;
         this.turno = turno.toUpperCase();
     }
 }
 
-const inscripcion1 = new Inscripciones('Anatomía', '6103', 'mañana');
-const inscripcion2 = new Inscripciones('Histología, Biología celular, Embriología y Genética', '6201', 'tarde');
-const inscripcion3 = new Inscripciones('Bioética I', '6301', 'noche');
-const inscripcion4 = new Inscripciones('Salud Mental', '7540', 'tarde');
-const inscripcion5 = new Inscripciones('Medicina Familiar', '6108', 'mañana');
+const inscripcion1 = new Inscripciones('Anatomía', '6103', 'Martin Garabal', '4','mañana');
+const inscripcion2 = new Inscripciones('Histología, Biología celular, Embriología y Genética', '6201', 'Miguel Granados', '32', 'tarde');
+const inscripcion3 = new Inscripciones('Bioética I', '6301', 'Victoria Garabal', '24', 'noche');
+const inscripcion4 = new Inscripciones('Salud Mental', '7540', 'Jose Álvarez', '13', 'tarde');
+const inscripcion5 = new Inscripciones('Medicina Familiar', '6108', 'Benito Antonio Martínez Ocasio', '32', 'mañana');
+
+const inscripMaterias = [];
+
+inscripMaterias.push(inscripcion1, inscripcion2, inscripcion3, inscripcion4, inscripcion5);
 
 const inscripciones24012 = [];
 

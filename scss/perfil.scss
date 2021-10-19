@@ -1,11 +1,9 @@
 @import "variables";
 
-html{height: 100%;}
-
 body{
     margin: 0;
-    height: 100%;
-    background: url(../assets/images/hero-back.jpg) no-repeat;
+    background-image:  linear-gradient(#000000b3), url(../assets/images/profile-back.jfif);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -21,8 +19,8 @@ body{
 
 .section{
     width: 100%;
-    height: fit-content;
-    padding-top: 50px;
+    height: 850px;
+    padding: 50px 0;
     font-family: $title-fonts;
     display: flex;
     justify-content: center;
@@ -50,7 +48,6 @@ body{
             padding: 10px;
             cursor: pointer;
             color: #fff;
-            transition: .3s;
             &:hover{
                 background: #4475ff;
                 transition: .3s;
@@ -61,6 +58,9 @@ body{
 
 .perfilContent{
     width: 80%;
+    height: fit-content;
+    min-height: 110px;
+    max-height: 760px;
     padding: 15px;
     background: #fff;
     border-top-right-radius: 3px;
@@ -69,6 +69,7 @@ body{
 }
 
 @mixin profile-borders{
+    max-height: 730px;
     padding: 10px;
     border: 1px solid $color-border2;
     border-radius: 5px;
@@ -87,6 +88,7 @@ body{
 
 .materias{
     @include profile-borders;
+    overflow-y: scroll;
     display: none;
 }
 
@@ -101,7 +103,136 @@ body{
     }
 }
 
+// Sección de las inscripciones
 .inscripciones{
     @include profile-borders;
     display: none;
+}
+
+#show-inscrip, #show-inscripAbiertas{
+    cursor: pointer;
+    &:hover{
+        color: purple;
+    }
+}
+
+.inscrip-info, .mostrar-inscrip{
+    display: none;
+}
+
+.inscrip-details{
+    margin: 20px 0;
+    padding: 5px;
+    background: #f1f1f1;
+    box-shadow: 2px 2px 7px 1px #cdcdcd;
+    border-radius: 3px;
+    h4{
+        margin: 0 0 8px 0;
+        padding: 4px;
+        background: $news-color;
+        color: #fff;
+    }
+    p{
+        margin: 0 0 5px 0;
+    }
+}
+
+.materias-disponibles{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 5px;
+    background: #f1f1f1;
+    box-shadow: 2px 2px 7px 1px #cdcdcd;
+    border-radius: 3px;
+    td{
+        width: 205px;
+        border-right: 1px solid $color-border2;
+    }
+}
+
+#inscribir-btn{
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    font-family: $title-fonts;
+    box-shadow: 0 0 4px 0px #b1b1b1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+    & span{
+        position: relative;
+        z-index: 2;
+        transition: .3s ease all;
+    }
+    &::after{
+        content: "";
+    width: 100%;
+    height: 300px;
+    background: #18a362;
+    position: absolute;
+    z-index: 1;
+    top: -300px;
+    left: 0;
+    transition: .4s ease-in-out all;
+    border-radius: 0 0 300px 300px;
+    }
+    &:hover::after{
+        top: 0;
+    }
+}
+
+// footer
+.footer{
+    width: 100%;
+    height: 90px;
+    background: $footer-color;
+    color: $nav-text-color;
+    font-family: $title-fonts;
+}
+
+.api-clima{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    span{padding: 3px;}
+    button{
+        padding: 3px;
+        color: $nav-text-color;
+        border: 1px solid $color-border;
+        border-radius: 5px;
+        background: $footer-color;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            background: $nav-text-color;
+            color: $footer-color;
+        }
+    }
+}
+
+.api-info{
+    height: 50%;
+}
+
+.clima-resp{
+    margin: 0;
+}
+
+.end-zone{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

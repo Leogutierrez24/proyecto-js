@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100;0,400;1,100;1,400&display=swap");
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  height: 100%;
-  background: url(../assets/images/hero-back.jpg) no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000b3)), url(../assets/images/profile-back.jfif);
+  background-image: linear-gradient(#000000b3), url(../assets/images/profile-back.jfif);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -94,10 +91,8 @@ nav {
 
 .section {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-top: 50px;
+  height: 850px;
+  padding: 50px 0;
   font-family: "Josefin Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,8 +138,6 @@ nav {
   padding: 10px;
   cursor: pointer;
   color: #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .perfilButtons ul span:hover {
@@ -155,6 +148,11 @@ nav {
 
 .perfilContent {
   width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 110px;
+  max-height: 760px;
   padding: 15px;
   background: #fff;
   border-top-right-radius: 3px;
@@ -163,6 +161,7 @@ nav {
 }
 
 .informacion {
+  max-height: 730px;
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
@@ -179,9 +178,11 @@ nav {
 }
 
 .materias {
+  max-height: 730px;
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
+  overflow-y: scroll;
   display: none;
 }
 
@@ -204,6 +205,7 @@ nav {
 }
 
 .inscripciones {
+  max-height: 730px;
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
@@ -213,5 +215,172 @@ nav {
 .inscripciones h3 {
   margin: 0 0 10px 0;
   color: #265fff;
+}
+
+#show-inscrip, #show-inscripAbiertas {
+  cursor: pointer;
+}
+
+#show-inscrip:hover, #show-inscripAbiertas:hover {
+  color: purple;
+}
+
+.inscrip-info, .mostrar-inscrip {
+  display: none;
+}
+
+.inscrip-details {
+  margin: 20px 0;
+  padding: 5px;
+  background: #f1f1f1;
+  -webkit-box-shadow: 2px 2px 7px 1px #cdcdcd;
+          box-shadow: 2px 2px 7px 1px #cdcdcd;
+  border-radius: 3px;
+}
+
+.inscrip-details h4 {
+  margin: 0 0 8px 0;
+  padding: 4px;
+  background: #265fff;
+  color: #fff;
+}
+
+.inscrip-details p {
+  margin: 0 0 5px 0;
+}
+
+.materias-disponibles {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  padding: 5px;
+  background: #f1f1f1;
+  -webkit-box-shadow: 2px 2px 7px 1px #cdcdcd;
+          box-shadow: 2px 2px 7px 1px #cdcdcd;
+  border-radius: 3px;
+}
+
+.materias-disponibles td {
+  width: 205px;
+  border-right: 1px solid #c9c9c9;
+}
+
+#inscribir-btn {
+  width: 100px;
+  height: 30px;
+  background: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-box-shadow: 0 0 4px 0px #b1b1b1;
+          box-shadow: 0 0 4px 0px #b1b1b1;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  position: relative;
+  overflow: hidden;
+}
+
+#inscribir-btn span {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+#inscribir-btn::after {
+  content: "";
+  width: 100%;
+  height: 300px;
+  background: #18a362;
+  position: absolute;
+  z-index: 1;
+  top: -300px;
+  left: 0;
+  -webkit-transition: .4s ease-in-out all;
+  transition: .4s ease-in-out all;
+  border-radius: 0 0 300px 300px;
+}
+
+#inscribir-btn:hover::after {
+  top: 0;
+}
+
+.footer {
+  width: 100%;
+  height: 90px;
+  background: #202124;
+  color: #a5a5a5;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.api-clima {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.api-clima span {
+  padding: 3px;
+}
+
+.api-clima button {
+  padding: 3px;
+  color: #a5a5a5;
+  border: 1px solid #ffffff3b;
+  border-radius: 5px;
+  background: #202124;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.api-clima button:hover {
+  background: #a5a5a5;
+  color: #202124;
+}
+
+.api-info {
+  height: 50%;
+}
+
+.clima-resp {
+  margin: 0;
+}
+
+.end-zone {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=perfil.css.map */
