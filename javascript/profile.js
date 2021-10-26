@@ -46,6 +46,7 @@ function mostrarInscrip(){
 
 function logout(){
     localStorage.removeItem('usuarioLogeado');
+    localStorage.removeItem('inscripcionesDelUsuario');
     location.href = '../pages/login.html';
 }
 
@@ -82,20 +83,6 @@ $('#show-inscrip').on('click', () =>{
 $('#show-inscripAbiertas').on('click', () => {
     $('.mostrar-inscrip').slideToggle('slow');
 });
-/*for(const materia of materias24012){
-        let materiaInfo = document.createElement('div')
-        materiaInfo.innerHTML = `<p>Materia: ${materia.nombre}</p>
-                         <p>Código de la materia: ${materia.codigo}</p>
-                         <p>Nota final: ${materia.calif}</p>
-                         <p>Estado de la materia: ${materia.estado}</p>`;
-        materiasContent.appendChild(materiaInfo);
-    } <- sin jquery*/
-
-/*infoContent.innerHTML = `<h3 class="infoTitle">Información</h3>
-                                <p>Nombre y apellido: ${logedUser.nombre}</p>
-                                <p>N° de libreta universitaria: ${logedUser.libreta}</p>
-                                <p>Email: ${logedUser.mail}</p>
-                            `; <- sin jquery*/
 
 // api clima
 $('.clima-btn').on('click', () => {
@@ -103,17 +90,17 @@ $('.clima-btn').on('click', () => {
     $.get(url, apiClima);
 });
 
-// EJECUCIÓN
+/* EJECUCIÓN */
 infoButton.style.background = '#fff';
 infoButton.style.color = '#265fff';
 infoContent.style.display = 'block';
 
-// qué mostrar en "Perfil"
+// Perfil
 $("#informacion").append(`<p>Nombre y apellido: ${logedUser.nombre}</p>
 <p>N° de libreta universitaria: ${logedUser.libreta}</p>
 <p>Email: ${logedUser.mail}</p>`);
 
-// qué mostrar en "Materias"
+// Materias
 if(logedUser.libreta != 24012){
     $('#materias').append(`<h3>Tu información todavía no ha sido cargada en el sistema</h3>`);
 } else {
@@ -128,36 +115,93 @@ if(logedUser.libreta != 24012){
     }
 }
 
-// qué mostrar en "Inscripciones -> Mis inscripciones"
-if(logedUser.libreta){
-    if(logedUser.libreta === 24012){
-        for(const inscrip of inscripciones24012){
-            $('.inscrip-info').append(`
-            <div class="inscrip-details">
-                <h4>${inscrip.nombre} ${inscrip.codigo}</h4>
-                <p>Profesor: ${inscrip.profesor}</p>
-                <p>Aula: ${inscrip.aula}</p>
-                <p>Turno: ${inscrip.turno}</p>
-            </div>`);
-        }
+// inscripciones
+if(usuariosInscripciones.length !== 0){
+    for(const inscrip of usuariosInscripciones){
+        $('.inscrip-info').append(`
+        <div class="inscrip-details">
+            <h4>${inscrip.nombre} ${inscrip.codigo}</h4>
+            <p>Profesor: ${inscrip.profesor}</p>
+            <p>Aula: ${inscrip.aula}</p>
+            <p>Turno: ${inscrip.turno}</p>
+        </div>`);}
+} else {
+    $('.inscrip-info').append(`<p>Todavía no tenes inscripciones.</p>`);
+}
+if(materiasDisponibles.length !== 0){
+    for(const matDisponibles of materiasDisponibles){
+    $('.mostrar-inscrip').append(`<table class="materias-disponibles">
+        <td>${matDisponibles.nombre} ${matDisponibles.codigo}</td>
+        <td>Profesor: ${matDisponibles.profesor}</td>
+        <td>Aula: ${matDisponibles.aula}</td>
+        <td>Turno: ${matDisponibles.turno}</td>
+        <td><button class="inscribir-btn" id="inscribirme-${matDisponibles.codigo}"><span>inscribirse</span></button></td>
+    </table>`);}
+} else {
+    $('.inscrip-info').append(`<p>No hay materias para inscribirse.</p>`);
+}
+
+$('#inscribirme-6103').on('click', () => {
+    const verifInscripciones = usuariosInscripciones.find(inscripcion => inscripcion.codigo === "6103");
+
+    if(!verifInscripciones){
+        usuariosInscripciones.push(inscripcion1);
+        localStorage.setItem('inscripcionesDelUsuario', JSON.stringify(usuariosInscripciones));
+        console.log("Inscripción exitosa");
+        $('#inscribirme-6103').prop('disabled', true);
     } else {
-        $('.inscrip-info').append(`<h3 class="noInscrip">No haz realizado ninguna inscripción aún.</h3>`);
+        alert("Ya estas inscripto a esta materia");
     }
-} else {
-    $('.inscrip-info').append(`<h3 class="noInscrip">Ups! Ha ocurrido un error</h3>`);
-}
+});
 
-// qué mostrar en "Inscripciones -> Inscripciones abiertas"
-if(logedUser.libreta){
-    for(const matDisponibles of inscripMaterias)
-        $('.mostrar-inscrip').append(`<table class="materias-disponibles">
-            <td>${matDisponibles.nombre} ${matDisponibles.codigo}</td>
-            <td>Profesor: ${matDisponibles.profesor}</td>
-            <td>Aula: ${matDisponibles.aula}</td>
-            <td>Turno: ${matDisponibles.turno}</td>
-            <td><button id="inscribir-btn"><span>inscribirse</span></button></td>
-        </table>`);
-} else {
-    $('.inscrip-info').append(`<h3 class="noInscrip">Ups! Ha ocurrido un error</h3>`);
-}
+$('#inscribirme-6201').on('click', () => {
+    const verifInscripciones = usuariosInscripciones.find(inscripcion => inscripcion.codigo === "6201");
 
+    if(!verifInscripciones){
+        usuariosInscripciones.push(inscripcion2);
+        localStorage.setItem('inscripcionesDelUsuario', JSON.stringify(usuariosInscripciones));
+        console.log("Inscripción exitosa");
+        $('#inscribirme-6201').prop('disabled', true);
+    } else {
+        alert("Ya estas inscripto a esta materia");
+    }
+});
+
+$('#inscribirme-6301').on('click', () => {
+    const verifInscripciones = usuariosInscripciones.find(inscripcion => inscripcion.codigo === "6301");
+
+    if(!verifInscripciones){
+        usuariosInscripciones.push(inscripcion3);
+        localStorage.setItem('inscripcionesDelUsuario', JSON.stringify(usuariosInscripciones));
+        console.log("Inscripción exitosa");
+        $('#inscribirme-6301').prop('disabled', true);
+    } else {
+        alert("Ya estas inscripto a esta materia");
+    }
+});
+
+$('#inscribirme-7540').on('click', () => {
+    const verifInscripciones = usuariosInscripciones.find(inscripcion => inscripcion.codigo === "7540");
+
+    if(!verifInscripciones){
+        usuariosInscripciones.push(inscripcion4);
+        localStorage.setItem('inscripcionesDelUsuario', JSON.stringify(usuariosInscripciones));
+        console.log("Inscripción exitosa");
+        $('#inscribirme-7540').prop('disabled', true);
+    } else {
+        alert("Ya estas inscripto a esta materia");
+    }
+})
+
+$('#inscribirme-6108').on('click', () => {
+    const verifInscripciones = usuariosInscripciones.find(inscripcion => inscripcion.codigo === "6108");
+
+    if(!verifInscripciones){
+        usuariosInscripciones.push(inscripcion5);
+        localStorage.setItem('inscripcionesDelUsuario', JSON.stringify(usuariosInscripciones));
+        console.log("Inscripción exitosa");
+        $('#inscribirme-6108').prop('disabled', true);
+    } else {
+        alert("Ya estas inscripto a esta materia");
+    }
+})

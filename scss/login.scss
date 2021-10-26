@@ -29,6 +29,7 @@ body{
     h3{
         margin: 0;
         text-align: center;
+        color: $news-color;
     }
 }
 
@@ -40,11 +41,16 @@ body{
         width: 350px;
         height: 30px;
         margin: 10px;
+        padding-left: 5px;
         border: 1px solid #c7c7c7;
         transition: .3s;
         &:focus{
             outline: none;
             box-shadow: $boxes-shadow;
+        }
+        &::placeholder{
+            font-family: $title-fonts;
+            font-style: italic;
         }
     }
     #login-button{
@@ -53,13 +59,14 @@ body{
         text-transform: uppercase;
         color: #000;
         cursor: pointer;
-        outline: none;
+        border: none;
         font-family: $title-fonts;
-        transition: .3s;
+        transition: .3s ease-in-out;
         &:hover{
             background: $news-color;
             color: #fff;
             border: none;
+            transition: .3s ease-in-out;
         }
     }
     p{
@@ -67,7 +74,10 @@ body{
     }
     a{
         margin-top: 7px;
-        padding-left: 10px;
+        color: $news-color;
         text-decoration: none;
+        &:hover{
+            color: purple;
+        }
     }
 }

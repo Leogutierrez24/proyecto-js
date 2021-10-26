@@ -66,10 +66,8 @@ const inscripcion3 = new Inscripciones('Bioética I', '6301', 'Victoria Garabal'
 const inscripcion4 = new Inscripciones('Salud Mental', '7540', 'Jose Álvarez', '13', 'tarde');
 const inscripcion5 = new Inscripciones('Medicina Familiar', '6108', 'Benito Antonio Martínez Ocasio', '32', 'mañana');
 
-const inscripMaterias = [];
+const materiasDisponibles = [];
 
-inscripMaterias.push(inscripcion1, inscripcion2, inscripcion3, inscripcion4, inscripcion5);
+materiasDisponibles.push(inscripcion1, inscripcion2, inscripcion3, inscripcion4, inscripcion5);
 
-const inscripciones24012 = [];
-
-inscripciones24012.push(inscripcion1, inscripcion2);
+const usuariosInscripciones = JSON.parse(localStorage.getItem("inscripcionesDelUsuario")) || [];
