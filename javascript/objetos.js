@@ -20,24 +20,7 @@ class Materia{
         this.calif = parseInt(calif);
         this.estado = false;
     }
-
-    materiaEstado(){
-        if(this.calif >= 4){
-            this.aprobado = true;
-        } else {
-            this.aprobado = false;
-        }
-    }
 }
-
-// materia1.materiaEstado();
-// materia2.materiaEstado();
-// materia3.materiaEstado();
-// materia4.materiaEstado();
-// materia5.materiaEstado();
-// materia6.materiaEstado();
-// materia7.materiaEstado();
-// materia8.materiaEstado();
 
 const materias24012 = [
     {nombre: 'Matemática', codigo: '28', calif: 5},
@@ -70,4 +53,4 @@ const materiasDisponibles = [];
 
 materiasDisponibles.push(inscripcion1, inscripcion2, inscripcion3, inscripcion4, inscripcion5);
 
-const usuariosInscripciones = JSON.parse(localStorage.getItem("inscripcionesDelUsuario")) || [];
+const usuariosInscripciones = JSON.parse(localStorage.getItem("inscripcionesDelUsuario")) || [inscripcion1, inscripcion2];

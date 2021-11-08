@@ -1,284 +1,286 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #ededed;
 }
 
-header {
+.header-container {
   width: 100%;
-  height: 60px;
-  padding-top: 20px;
+  height: 5rem;
+  background: #265fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 10px 30px;
 }
 
-nav {
+header {
   width: 90%;
-  padding: 0 20px;
-  height: 50px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 5px 2px #b1b1b1;
-          box-shadow: 0 0 5px 2px #b1b1b1;
-  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Josefin Sans", sans-serif;
 }
 
-.navContainer {
-  width: 100%;
-  height: 100%;
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.navMenu {
+.nav-bar {
+  width: 30%;
+}
+
+.nav-menu {
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.navMenu li {
-  padding: 0 10px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.navMenu li:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
-}
-
-.navMenu li a {
-  padding: 13px;
-  color: #a5a5a5;
-  text-decoration: none;
-  border: .9px solid #c9c9c9;
-  border-radius: 20px;
-}
-
-.navMenu li a:hover {
-  color: #000;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.hero {
-  width: 92%;
-  height: 300px;
-  margin: 10px auto;
-  background: url(../assets/images/hero-back.jpg) no-repeat;
-  background-size: cover;
-}
-
-.hero .hero-bottom {
-  width: 100%;
-  height: 100%;
-  background: #000000b0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero h2 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-  padding-top: 50px;
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.newsSection {
-  width: 92%;
-  height: 400px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.newsSection h2 {
-  width: 10%;
-  margin: 0;
-  padding: 10px;
-  background: #265fff;
-  text-align: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3rem;
-  color: #fff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.newsContainer {
-  width: 100%;
-  background: #265fff;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.news {
-  width: 20%;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ffffff3b;
-}
-
-.newsTitle-container {
-  text-align: center;
-  font-family: "Bebas Neue", cursive;
-}
-
-.newsTitle-container h3 {
-  margin: 0 0 10px 0;
-  border-bottom: 1px solid #ffffff3b;
-  color: #fff;
-  text-shadow: 0 0 3px #333333;
-  letter-spacing: .1rem;
-}
-
-.newsText-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.newsText-container p {
-  margin: 0 0 10px 0;
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.newsText-container a {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 10px;
-  border: 1px solid #ffffff3b;
-  border-radius: 3px;
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-  text-decoration: none;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-.newsText-container a:hover {
-  background: #fff;
-  color: #265fff;
-}
-
-.contacto {
-  width: 100%;
-  height: 600px;
-  background: #265fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contactoContainer {
-  width: 92%;
-  height: 90%;
-  margin: auto;
-  border: 1px solid #ffffff3b;
-}
-
-.contactoTitle {
-  width: 30%;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-}
-
-.contactoDetail-container {
-  width: 100%;
-  max-width: 1200px;
-  height: 90%;
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.nav-link {
+  padding: 15px 0;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #fff;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.main-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title-container {
+  width: 90%;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  text-shadow: 0 3px 3px #919191;
+}
+
+.newsSection {
+  width: 100%;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news-container {
+  width: 90%;
+  padding: 30px;
+}
+
+.news {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  text-shadow: 0 3px 3px #919191;
+}
+
+.news-wraper {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news-left-side {
+  width: 50%;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.news-right-side {
+  width: 50%;
+  height: 100%;
+}
+
+.main-news {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000080)), url(../assets/images/news-1.jfif);
+  background: linear-gradient(#00000080), url(../assets/images/news-1.jfif);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.main-news:hover .news-title {
+  color: #265fff;
+}
+
+.second-news {
+  height: 68%;
+  margin-bottom: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000080)), url(../assets/images/news-2.jfif);
+  background: linear-gradient(#00000080), url(../assets/images/news-2.jfif);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.second-news:hover .news-title {
+  color: #265fff;
+}
+
+.third-news {
+  height: 30%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000080)), url(../assets/images/news-3.jfif);
+  background: linear-gradient(#00000080), url(../assets/images/news-3.jfif);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.third-news:hover .news-title {
+  color: #265fff;
+}
+
+.news-content {
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.news-title {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: .1rem;
+}
+
+.news-subtitle {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.news-date {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: italic;
+  color: #a5a5a5;
+}
+
+.contactoSection {
+  width: 100%;
+  background: #265fff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contacto-container {
+  width: 90%;
+  padding: 15px 30px;
+}
+
+.contacto-title {
+  font-size: 1.3rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.contactoDetail-container {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .contact-detail {
   width: 400px;
-  padding: 15px;
-  font-size: .8rem;
+  height: 130px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 2px;
   font-family: "Josefin Sans", sans-serif;
-  color: #fff;
-  background: #265fff;
-  border: 1px solid #ffffff3b;
-}
-
-.contact-detail h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-  padding: 2px 0;
-  border-bottom: 1px solid #fff;
-}
-
-.contact-detail p {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-  padding: 2px 0;
 }
 
 .contact-detail:hover {
-  color: #000;
   background: #fff;
+  color: #000;
+}
+
+.contact-name {
+  margin: 0;
+}
+
+.contact-tel {
+  margin: 10px 0;
+}
+
+.contact-mail {
+  margin: 0;
+}
+
+@media screen and (max-width: 1420px) {
+  .contactoDetail-container {
+    height: 600px;
+  }
 }
 /*# sourceMappingURL=home-style.css.map */

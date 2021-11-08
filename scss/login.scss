@@ -29,7 +29,7 @@ body{
     h3{
         margin: 0;
         text-align: center;
-        color: $news-color;
+        color: $blue-color;
     }
 }
 
@@ -63,7 +63,7 @@ body{
         font-family: $title-fonts;
         transition: .3s ease-in-out;
         &:hover{
-            background: $news-color;
+            background: $blue-color;
             color: #fff;
             border: none;
             transition: .3s ease-in-out;
@@ -74,7 +74,7 @@ body{
     }
     a{
         margin-top: 7px;
-        color: $news-color;
+        color: $blue-color;
         text-decoration: none;
         &:hover{
             color: purple;

@@ -8,103 +8,103 @@
     <title>Campus fmed</title>
 </head>
 <body>
-    <!-- sección del encabezado -->
-    <header>
-        <!-- barra de navegación -->
-        <nav>
-            <div class="navContainer">
-                <a href="">Link Logo</a>
-            <ul class="navMenu">
-                <li><a href="#news">Noticias</a></li>
-                <li><a href="#contacto">Contactos</a></li>
-                <li id="home-loginbtn"><a href="./pages/login.html">Ingresar</a></li>
-                <li  id="home-accountbtn"><a href="./pages/profile.html">Mi cuenta</a></li>
-            </ul>
+    <div class="header-container">
+        <header>
+            <div class="logo-container">
+                <a href="" class="logo">Link Logo</a>
             </div>
-        </nav>
-    </header>
-    <!-- banner -->
-    <div class="hero">
-        <div class="hero-bottom">
-            <h2 class="heroTitle">Bienvenido al sitio de servicios on-line de la Facultad de Medicina</h2>
+            <nav class="nav-bar">
+                <ul class="nav-menu">
+                    <li><a href="#noticias" class="nav-link">Noticias</a></li>
+                    <li><a href="#contacto" class="nav-link">Contactos</a></li>
+                    <li id="home-loginbtn"><a href="./pages/login.html" class="nav-link">Ingresar</a></li>
+                    <li id="home-accountbtn"><a href="./pages/profile.html" class="nav-link">Mi cuenta</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="main-title">
+        <div class="title-container">
+            <h2 class="title">Bienvenido al campus virtual</h2>
         </div>
     </div>
     <!-- sección de noticias -->
     <div class="newsSection">
-        <h2 id="news">Noticias</h2>
-        <div class="newsContainer">
-            <article class="news">
-                <div class="newsTitle-container">
-                    <h3>Titulo de la noticia</h3>
+       <div class="news-container">
+            <h3 class="news" id="noticias">Noticias</h3>
+            <div class="news-wraper">
+                <div class="news-left-side">
+                    <section class="main-news">
+                        <div class="news-content">
+                            <h3 class="news-title">Titulo de la primer noticia</h3>
+                            <p class="news-subtitle">Una breve introducción de la noticia principal</p>
+                            <small class="news-date">fecha de publicación</small>
+                        </div>
+                    </section>
                 </div>
-                <div class="newsText-container">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque temporibus ea in earum alias molestias recusandae laborum dolorum laboriosam similique. Porro qui explicabo quam ratione ea, eum facere fugit ullam?</p>
-                    <a href="">Ver más</a>    
+                <div class="news-right-side">
+                    <section class="second-news">
+                        <div class="news-content">
+                            <h3 class="news-title">Titulo de la segunda noticia</h3>
+                            <p class="news-subtitle">Una breve introducción de la noticia secundaria</p>
+                            <small class="news-date">fecha de publicación</small>
+                        </div>
+                    </section>
+                    <section class="third-news">
+                        <div class="news-content">
+                            <h3 class="news-title">Titulo de la tercer noticia</h3>
+                            <p class="news-subtitle">Una breve introducción de la noticia secundaria</p>
+                            <small class="news-date">fecha de publicación</small>
+                        </div>
+                    </section>
                 </div>
-            </article>
-            <article class="news">
-                <div class="newsTitle-container">
-                    <h3>Titulo de la noticia</h3>
-                </div>
-                <div class="newsText-container">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque temporibus ea in earum alias molestias recusandae laborum dolorum laboriosam similique. Porro qui explicabo quam ratione ea, eum facere fugit ullam?</p>
-                    <a href="">Ver más</a>    
-                </div>
-            </article>
-            <article class="news">
-                <div class="newsTitle-container">
-                    <h3>Titulo de la noticia</h3>
-                </div>
-                <div class="newsText-container">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque temporibus ea in earum alias molestias recusandae laborum dolorum laboriosam similique. Porro qui explicabo quam ratione ea, eum facere fugit ullam?</p>
-                    <a href="">Ver más</a>    
-                </div>
-            </article>
-        </div>
+            </div>
+       </div>
     </div>
     <!-- sección del footer -->
-    <div class="contacto" id="contacto">
-        <div class="contactoContainer">
-            <h3 class="contactoTitle">Contactos de la Facultad de Medicina</h3>
+    <div class="contactoSection" id="contacto">
+        <div class="contacto-container">
+            <h3 class="contacto-title">Contactos de la Facultad de Medicina</h3>
             <div class="contactoDetail-container">
                 <div class="contact-detail">
-                    <h3><strong>Dirección de admisión</strong> (Ingresantes)</h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>diradmision@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de admisión</strong> (Ingresantes)</h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">diradmision@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección de alumnos</strong> (de Medicina)</h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>diralumnos@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de alumnos</strong> (de Medicina)</h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">diralumnos@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección de licenciaturas y cursos</strong> (otras carreras)</h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>dirconexas@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de licenciaturas y cursos</strong> (otras carreras)</h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">dirconexas@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección de posgrados</strong> (Especializaciones)</h3>                    <p>+54 (11) 235-4500</p>
-                    <p>sdocgrad@fmedd.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de posgrados</strong> (Especializaciones)</h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">sdocgrad@fmedd.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección de la carrera Docente</strong></h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>sdocgrad@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de la carrera Docente</strong></h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">sdocgrad@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección de títulos</strong></h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>dirtitulos@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección de títulos</strong></h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">dirtitulos@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Secretaría de extesión universitaria</strong></h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>seube@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Secretaría de extesión universitaria</strong></h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">seube@fmed.ar</p>
                 </div>
                 <div class="contact-detail">
-                    <h3><strong>Dirección general de biblioteca central</strong></h3>
-                    <p>+54 (11) 235-4500</p>
-                    <p>bibmed@fmed.ar</p>
+                    <h3 class="contact-name"><strong>Dirección general de biblioteca central</strong></h3>
+                    <p class="contact-tel">+54 (11) 235-4500</p>
+                    <p class="contact-mail">bibmed@fmed.ar</p>
                 </div>
             </div>
         </div>

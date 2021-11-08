@@ -3,45 +3,35 @@
 const logedUser = JSON.parse(localStorage.getItem('usuarioLogeado'));
 
 function mostrarInfo(){
-    infoButton.style.background = '#fff';
-    infoButton.style.color = '#265fff';
-    infoContent.style.display = 'block';
+    infoButton.classList.add('active-btn');
+    infoContent.classList.add('show-section');
 
-    materiasButton.style.background = '#265fff';
-    materiasButton.style.color = '#fff';
-    materiasContent.style.display = 'none';
+    materiasButton.classList.remove('active-btn');
+    materiasContent.classList.remove('show-section');
 
-    inscripButton.style.background = '#265fff';
-    inscripButton.style.color = '#fff';
-    inscripContent.style.display = 'none';
+    inscripButton.classList.remove('active-btn');
+    inscripContent.classList.remove('show-section');
 }
 
 function mostrarMaterias(){
-    materiasButton.style.background = '#fff';
-    materiasButton.style.color = '#265fff';
-    materiasContent.style.display = 'block';
+    infoButton.classList.remove('active-btn');
+    infoContent.classList.remove('show-section');
 
-    infoButton.style.background = '#265fff'
-    infoButton.style.color = '#fff';
-    infoContent.style.display = 'none';
+    materiasButton.classList.add('active-btn');
+    materiasContent.classList.add('show-section');
 
-    inscripButton.style.background = '#265fff';
-    inscripButton.style.color = '#fff';
-    inscripContent.style.display = 'none';
+    inscripButton.classList.remove('active-btn');
+    inscripContent.classList.remove('show-section');
 }
-
 function mostrarInscrip(){
-    inscripButton.style.background = '#fff';
-    inscripButton.style.color = '#265fff';
-    inscripContent.style.display = 'block';
+    infoButton.classList.remove('active-btn');
+    infoContent.classList.remove('show-section');
 
-    infoButton.style.background = '#265fff'
-    infoButton.style.color = '#fff';
-    infoContent.style.display = 'none';
+    materiasButton.classList.remove('active-btn');
+    materiasContent.classList.remove('show-section');
 
-    materiasButton.style.background = '#265fff';
-    materiasButton.style.color = '#fff';
-    materiasContent.style.display = 'none';
+    inscripButton.classList.add('active-btn');
+    inscripContent.classList.add('show-section');
 }
 
 function logout(){
@@ -91,9 +81,8 @@ $('.clima-btn').on('click', () => {
 });
 
 /* EJECUCIÓN */
-infoButton.style.background = '#fff';
-infoButton.style.color = '#265fff';
-infoContent.style.display = 'block';
+infoButton.classList.add('active-btn');
+infoContent.classList.add('show-section');
 
 // Perfil
 $("#informacion").append(`<p>Nombre y apellido: ${logedUser.nombre}</p>
@@ -109,7 +98,6 @@ if(logedUser.libreta != 24012){
             <p>Materia: ${materia.nombre}</p>
             <p>Código de la materia: ${materia.codigo}</p>
             <p>Nota final: ${materia.calif}</p>
-            <p>Estado de la materia: ${materia.estado}</p>
         </div>
         `)
     }
@@ -128,6 +116,7 @@ if(usuariosInscripciones.length !== 0){
 } else {
     $('.inscrip-info').append(`<p>Todavía no tenes inscripciones.</p>`);
 }
+
 if(materiasDisponibles.length !== 0){
     for(const matDisponibles of materiasDisponibles){
     $('.mostrar-inscrip').append(`<table class="materias-disponibles">

@@ -1,217 +1,226 @@
 @import "variables";
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background: #ededed;
 }
 
-// encabezado
-header{
+.header-container{
     width: 100%;
-    height: 60px;
-    padding-top: 20px;
+    height: 5rem;
+    background: $blue-color;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 10px 30px;
 }
 
-// barra de navegación
-nav{
+header{
     width: 90%;
-    padding: 0 20px;
-    height: 50px;
-    background: #fff;
-    box-shadow: $boxes-shadow;
-    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
     font-family: $title-fonts;
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
-.navContainer{
-    width: 100%;
-    height: 100%;
+.logo-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.navMenu{
+.nav-bar{
+    width: 30%;
+}
+
+.nav-menu{
+    height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    li{
-        padding: 0 10px;
-        transition: .3s;
-        &:hover{
-            transform: scale(1.04);
-        }
-        a{
-            padding: 13px;
-            color: #a5a5a5;
-            text-decoration: none;
-            border: .9px solid #c9c9c9;
-            border-radius: 20px;
-            &:hover{
-                color: #000;
-                transition: .3s;
-            }
-        }
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-link{
+    padding: 15px 0;
+    border-bottom: 3px solid transparent;
+    transition: .3s ease-in-out;
+    &:hover{
+        border-bottom: 3px solid #fff;
+        transition: .3s ease-in-out;
     }
 }
 
-// Banner - Sección Hero
-.hero{
-    width: 92%;
-    height: 300px;
-    margin: 10px auto;
-    background: url(../assets/images/hero-back.jpg) no-repeat;
-    background-size: cover;
-    .hero-bottom{
-        width: 100%;
-        height: 100%;
-        background: #000000b0;
-        display: flex;
-        justify-content: center;
-    }
-    h2{
-        width: fit-content;
-        margin: 0;
-        padding-top: 50px;
-        color: #fff;
-        font-family: $title-fonts;
-    }
+.main-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.title-container{
+    width: 90%;
+    padding: 30px;
+}
+
+.title{
+    text-align: center;
+    font-family: $title-fonts;
+    font-size: 2rem;
+    text-shadow: $text-shadow;
+}
+
 // Sección de noticias
 .newsSection{
-    width: 92%;
-    height: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h2{
-        width: 10%;
-        margin: 0;
-        padding: 10px;
-        background: $news-color;
-        text-align: center;
-        font-family: $title-fonts;
-        font-size: 1.3rem;
-        color: #fff;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-}
-
-.newsContainer{
     width: 100%;
-    background: $news-color;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    height: 700px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-//contenedor de noticia (individual)
+.news-container{
+    width: 90%;
+    padding: 30px;
+}
+
 .news{
-    width: 20%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid $color-border;
+    font-family: $title-fonts;
+    font-size: 1.3rem;
+    text-shadow: $text-shadow;
 }
 
-.newsTitle-container{
-    text-align: center;
-    font-family: $news-title;
-    h3{
-        margin: 0 0 10px 0;
-        border-bottom: 1px solid $color-border;
-        color: #fff;
-        text-shadow: $text-shadow;
-        letter-spacing: .1rem;
+.news-wraper{
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.news-left-side{
+    width: 50%;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.news-right-side{
+    width: 50%;
+    height: 100%;
+}
+
+.main-news{
+    height: 100%;
+    background: linear-gradient(#00000080), url(../assets/images/news-1.jfif);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    &:hover{
+        .news-title{color: $blue-color}
     }
 }
 
-.newsText-container{
+.second-news{
+    height: 68%;
+    margin-bottom: 10px;
+    background: linear-gradient(#00000080), url(../assets/images/news-2.jfif);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    &:hover{
+        .news-title{color: $blue-color}
+    }
+}
+
+.third-news{
+    height: 30%;
+    background: linear-gradient(#00000080), url(../assets/images/news-3.jfif);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    &:hover{
+        .news-title{color: $blue-color}
+    }
+}
+
+.news-content{
+    height: 100%;
+    padding: 20px;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    p{
-        margin: 0 0 10px 0;
-        color: #fff;
-        font-family: $title-fonts;
-    }
-    a{
-        align-self: center;
-        padding: 10px;
-        border: 1px solid $color-border;
-        border-radius: 3px;
-        color: #fff;
-        font-family: $title-fonts;
-        text-decoration: none;
-        transition: .2s;
-        &:hover{
-            background: #fff;
-            color: $news-color;
-        }
-    }
+    justify-content: flex-end;
+}
+
+.news-title{
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-family: $news-title;
+    letter-spacing: .1rem;
+}
+
+.news-subtitle{
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    font-family: $title-fonts;
+}
+
+.news-date{
+    font-family: $title-fonts;
+    font-style: italic;
+    color: $nav-text-color;
 }
 
 // contacto
-.contacto{
+
+.contactoSection{
     width: 100%;
-    height: 600px;
-    background: #265fff;
+    background: $blue-color;
+    color: #fff;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.contactoContainer{
-    width: 92%;
-    height: 90%;
-    margin: auto;
-    border: 1px solid #ffffff3b;
+.contacto-container{
+    width: 90%;
+    padding: 15px 30px;
 }
 
-.contactoTitle{
-    width: 30%;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
+.contacto-title{
+    font-size: 1.3rem;
+    font-family: $title-fonts;
 }
 
 .contactoDetail-container{
     width: 100%;
-    max-width: 1200px;
-    height: 90%;
-    border-radius: 3px;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact-detail{
     width: 400px;
-    padding: 15px;
-    font-size: .8rem;
+    height: 130px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 2px;
     font-family: $title-fonts;
-    color: #fff;
-    background: #265fff;
-    border: 1px solid #ffffff3b;
-    h3{
-        width: fit-content;
-        margin: 0;
-        padding: 2px 0;
-        border-bottom: 1px solid #fff;
-    }
-    p{
-        width: fit-content;
-        margin: 0;
-        padding: 2px 0;
-    }
     &:hover{
-        color: #000;
         background: #fff;
+        color: #000;
+    }
+}
+
+.contact-name{margin: 0;}
+.contact-tel{margin: 10px 0;}
+.contact-mail{margin: 0;}
+
+@media screen and (max-width: 1420px){
+    .contactoDetail-container{
+        height: 600px;
     }
 }

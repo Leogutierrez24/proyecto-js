@@ -39,20 +39,23 @@ body{
         flex-direction: column;
         li{
             height: 40px;
-            background: $news-color;
+            background: $blue-color;
             display: inherit;
             justify-content: center;
-        }
-        span{
-            width: 100%;
-            padding: 10px;
-            cursor: pointer;
-            color: #fff;
-            &:hover{
-                background: #4475ff;
-                transition: .3s;
-            }
-        }
+        }    
+    }
+}
+
+#info-btn, #materias-btn, #inscrip-btn{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease;
+    &:hover{
+        background: #fff;
+        color: $news-color;
+        transition: .3s ease;
     }
 }
 
@@ -76,14 +79,14 @@ body{
     border-radius: 5px;
     h3{
         margin: 0 0 10px 0;
-        color: $news-color;
+        color: $blue-color;
     }
     
 }
 
 .informacion{
     @include profile-borders;
-    display: block;
+    display: none;
     p{margin: 8px 0;}
 }
 .perfil-img{width: 70px;}
@@ -119,7 +122,7 @@ body{
 }
 
 .inscrip-info, .mostrar-inscrip{
-    display: none;
+    display: block;
 }
 
 .inscrip-details{
@@ -131,7 +134,7 @@ body{
     h4{
         margin: 0 0 8px 0;
         padding: 4px;
-        background: $news-color;
+        background: $blue-color;
         color: #fff;
     }
     p{
@@ -239,4 +242,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.show-section{
+    display: block
+}
+
+.active-btn{
+    background: #fff;
+    color: $blue-color !important;
 }

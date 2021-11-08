@@ -133,17 +133,20 @@ nav {
           justify-content: center;
 }
 
-.perfilButtons ul span {
+#info-btn, #materias-btn, #inscrip-btn {
   width: 100%;
   padding: 10px;
   cursor: pointer;
   color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
-.perfilButtons ul span:hover {
-  background: #4475ff;
-  -webkit-transition: .3s;
-  transition: .3s;
+#info-btn:hover, #materias-btn:hover, #inscrip-btn:hover {
+  background: #fff;
+  color: #265fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .perfilContent {
@@ -166,7 +169,7 @@ nav {
   padding: 10px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
-  display: block;
+  display: none;
 }
 
 .informacion h3 {
@@ -233,7 +236,7 @@ nav {
 }
 
 .inscrip-info, .mostrar-inscrip {
-  display: none;
+  display: block;
 }
 
 .inscrip-details {
@@ -391,5 +394,14 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.show-section {
+  display: block;
+}
+
+.active-btn {
+  background: #fff;
+  color: #265fff !important;
 }
 /*# sourceMappingURL=perfil.css.map */
